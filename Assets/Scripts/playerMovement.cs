@@ -10,7 +10,7 @@ public class playerMovement : MonoBehaviour
     private Animator animator;
     private Rigidbody rb;
     [SerializeField] private float speed = 5f;
-    private float exactScore;
+    public static float exactScore;
     private bool moveUp = true;
     private Text scoreText;
     public static bool isAlive, isStarted;
@@ -20,12 +20,13 @@ public class playerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isStarted = false;
+        isStarted = true;
         isAlive = true;
         score = 0;
         exactScore = 0;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        scoreText = GameObject.Find("Score").GetComponent<Text>();
     }
     void FixedUpdate()
     {
@@ -38,15 +39,16 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        score = Mathf.RoundToInt(exactScore);
+        scoreText.text = "Score: " + score;
         //DEATH
         if (!isAlive)
         {
-            score = Mathf.RoundToInt(exactScore);
+            
             animator.SetBool("isAlive", false);
             rb.useGravity = true;
-            scoreText = GameObject.Find("Score").GetComponent<Text>();
-            scoreText.text = "Score: " + score;
+            
+            
         }
 
      // START
