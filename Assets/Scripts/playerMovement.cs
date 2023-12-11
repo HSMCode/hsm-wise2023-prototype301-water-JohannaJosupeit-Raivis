@@ -86,8 +86,8 @@ public class playerMovement : MonoBehaviour
         transform.Translate(new Vector3(0f, translation, 0f));
 
         // Stop at -1 or 1 on the y-axis
-        Vector3 clampedPosition = transform.localPosition;
+        Vector3 clampedPosition = transform.position;
         clampedPosition.y = Mathf.Clamp(clampedPosition.y, -1.5f, 1.5f);
-        transform.localPosition = clampedPosition;
+        transform.position = clampedPosition;
     }
 }

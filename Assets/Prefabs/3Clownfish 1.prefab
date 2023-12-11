@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5755111533396635788}
   - component: {fileID: 7575612297704328894}
   m_Layer: 0
-  m_Name: Food01
+  m_Name: 3Clownfish 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5402171877084750664}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.05, z: 6.048}
+  m_LocalPosition: {x: 0, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -56,8 +56,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7114476, y: 0.41395175, z: 0.7416711}
-  m_Center: {x: -0.1442762, y: 1.7564888, z: 3.7233837}
+  m_Size: {x: 0.7114476, y: 0.33967733, z: 0.7416711}
+  m_Center: {x: -0.1442762, y: -1.4243646, z: 3.7233837}
 --- !u!114 &5755111533396635788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c51467aeb61754598e4ab1506d5acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
   points: 20
 --- !u!54 &7575612297704328894
 Rigidbody:
@@ -124,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7738370524306152085, guid: ac025b10ea6ba084583ce269e3462202, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5452
+      value: -1.6248002
       objectReference: {fileID: 0}
     - target: {fileID: 7738370524306152085, guid: ac025b10ea6ba084583ce269e3462202, type: 3}
       propertyPath: m_LocalPosition.z
@@ -221,7 +222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7738370524306152085, guid: ac025b10ea6ba084583ce269e3462202, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7
+      value: -1.47
       objectReference: {fileID: 0}
     - target: {fileID: 7738370524306152085, guid: ac025b10ea6ba084583ce269e3462202, type: 3}
       propertyPath: m_LocalPosition.z
@@ -318,7 +319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7738370524306152085, guid: ac025b10ea6ba084583ce269e3462202, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.479
+      value: -1.6909999
       objectReference: {fileID: 0}
     - target: {fileID: 7738370524306152085, guid: ac025b10ea6ba084583ce269e3462202, type: 3}
       propertyPath: m_LocalPosition.z
