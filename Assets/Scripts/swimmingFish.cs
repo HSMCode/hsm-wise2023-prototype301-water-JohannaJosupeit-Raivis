@@ -7,28 +7,35 @@ public class swimmingFish : MonoBehaviour
     public float speed;
     public int points;
     private bool isAlive;
+    private float t;
     // Start is called before the first frame update
     void Start()
     {
         isAlive = true;
-        speed = 3f;
+        t = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        t += Time.deltaTime;
+        if (t > 50f)
+        {
+            this.gameObject.SetActive(false);
+        }
         transform.position = transform.position - transform.forward * speed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider other)
     {
         
-        if(isAlive)
+        if(isAlive && other.gameObject.CompareTag("Player"))
         {
             playerMovement.exactScore += points;
             isAlive = false;
             this.gameObject.SetActive(false);
         }
+        
         
     }
 }
