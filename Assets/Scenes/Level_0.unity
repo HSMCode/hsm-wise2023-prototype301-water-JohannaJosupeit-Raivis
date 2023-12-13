@@ -897,9 +897,25 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.02745098
       objectReference: {fileID: 0}
+    - target: {fileID: 1728185221036695357, guid: 1eab6acbc679bac43b2c43b24a8f2189, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 4393599228981875574, guid: 1eab6acbc679bac43b2c43b24a8f2189, type: 3}
       propertyPath: m_Name
       value: StartScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231856764203568036, guid: 1eab6acbc679bac43b2c43b24a8f2189, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -366
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391148278299531833, guid: 1eab6acbc679bac43b2c43b24a8f2189, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391148278299531833, guid: 1eab6acbc679bac43b2c43b24a8f2189, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 290
       objectReference: {fileID: 0}
     - target: {fileID: 7747466071510609219, guid: 1eab6acbc679bac43b2c43b24a8f2189, type: 3}
       propertyPath: m_Text
@@ -916,6 +932,18 @@ PrefabInstance:
     - target: {fileID: 7747466071510609219, guid: 1eab6acbc679bac43b2c43b24a8f2189, type: 3}
       propertyPath: m_Color.r
       value: 0.02745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747466071510609219, guid: 1eab6acbc679bac43b2c43b24a8f2189, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 204
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747466071510609219, guid: 1eab6acbc679bac43b2c43b24a8f2189, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747466071510609219, guid: 1eab6acbc679bac43b2c43b24a8f2189, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9210023128413019621, guid: 1eab6acbc679bac43b2c43b24a8f2189, type: 3}
       propertyPath: m_Pivot.x
@@ -1679,6 +1707,14 @@ PrefabInstance:
     - target: {fileID: 5488920224728097072, guid: 870f6afdb6d28ff4ba24a1095e8edb7a, type: 3}
       propertyPath: m_Name
       value: Orca
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847049199957255921, guid: 870f6afdb6d28ff4ba24a1095e8edb7a, type: 3}
+      propertyPath: m_Height
+      value: 2.060633
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847049199957255921, guid: 870f6afdb6d28ff4ba24a1095e8edb7a, type: 3}
+      propertyPath: m_Center.z
+      value: 0.15085709
       objectReference: {fileID: 0}
     - target: {fileID: 5847049199957255921, guid: 870f6afdb6d28ff4ba24a1095e8edb7a, type: 3}
       propertyPath: m_IsTrigger
