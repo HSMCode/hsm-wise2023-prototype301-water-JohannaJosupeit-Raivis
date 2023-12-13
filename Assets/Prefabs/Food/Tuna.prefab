@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  points: 50
+  points: 6
 --- !u!54 &7575612297704328894
 Rigidbody:
   m_ObjectHideFlags: 0

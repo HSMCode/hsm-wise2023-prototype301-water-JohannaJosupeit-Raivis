@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class obstacleScript : MonoBehaviour
+public class jellyfishScript
+    : MonoBehaviour
 {
-    private float speed;
+    public float speed;
     private bool isAlive;
     private float t;
     private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        speed = 2f;
         isAlive = true;
         t = 0;
         animator = GameObject.Find("Orca").GetComponent<Animator>();
@@ -40,7 +40,5 @@ public class obstacleScript : MonoBehaviour
             playerMovement.isAlive = false;
             animator.SetBool("isAlive", false);
         }
-        
-        
     }
 }
