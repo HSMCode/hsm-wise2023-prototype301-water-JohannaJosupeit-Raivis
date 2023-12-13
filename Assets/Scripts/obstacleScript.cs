@@ -35,7 +35,7 @@ public class obstacleScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        if(isAlive && other.gameObject.CompareTag("Player"))
+        if(isAlive && other.gameObject.CompareTag("Player") && playerMovement.isStarted)
         {
             playerMovement.isAlive = false;
             animator.SetBool("isAlive", false);

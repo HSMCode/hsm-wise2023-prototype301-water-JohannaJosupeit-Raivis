@@ -20,12 +20,10 @@ public class playerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isStarted = true;
+        isStarted = false;
         isAlive = true;
         score = 0;
         exactScore = 0;
-        animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
         scoreText = GameObject.Find("Score").GetComponent<Text>();
     }
    
@@ -33,22 +31,12 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         score = Mathf.RoundToInt(exactScore);
-        scoreText.text = "Score: " + score;
-        //DEATH
-        if (!isAlive)
-        {
-            
-            animator.SetBool("isAlive", false);
-            rb.useGravity = true;
-            
-            
-        }
+        scoreText.text = "Score:" + exactScore;
 
      // START
-        if (Input.GetButtonDown("Jump") && !isAlive)
+        if (Input.GetKeyDown(KeyCode.R) && !isAlive)
         {
-            Debug.Log("Restart");
-            //SceneManager.LoadScene("Level_0");
+            SceneManager.LoadScene("Level_0");
         }
         else if (Input.GetButtonDown("Jump") && !isStarted)
         {

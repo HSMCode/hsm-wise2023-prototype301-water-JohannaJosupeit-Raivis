@@ -23,18 +23,18 @@ public class swimmingFish : MonoBehaviour
         {
             this.gameObject.SetActive(false);
         }
-       
-            transform.position = transform.position - transform.forward * speed* 2 * Time.deltaTime;
-       
-       
+      
+            transform.position = transform.position - transform.forward * speed * 2 * Time.deltaTime;
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         
-        if(isAlive && other.gameObject.CompareTag("Player") && playerMovement.isAlive)
+        if(isAlive && other.gameObject.CompareTag("Player") && playerMovement.isAlive && playerMovement.isStarted)
         {
             playerMovement.exactScore += points;
+            Debug.Log("points");
             isAlive = false;
             this.gameObject.SetActive(false);
         }

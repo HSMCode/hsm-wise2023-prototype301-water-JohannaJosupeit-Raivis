@@ -20,7 +20,7 @@ public class jellySpawner : MonoBehaviour
     private void Update()
     {
         t = t + Time.deltaTime;
-        if (t >= spawnTime)
+        if (t >= spawnTime && playerMovement.isStarted)
         {
             
             height = Random.Range(-maxHeight, maxHeight);

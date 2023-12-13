@@ -19,7 +19,7 @@ public class spawner : MonoBehaviour
     private void Update()
     {
         t = t + Time.deltaTime;
-        if (t >= spawnTime)
+        if (t >= spawnTime )
         {
             height = Random.Range(-maxHeight, maxHeight);
             SpawnFood();
