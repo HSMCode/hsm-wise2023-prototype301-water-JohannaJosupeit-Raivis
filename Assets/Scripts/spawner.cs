@@ -7,7 +7,7 @@ public class spawner : MonoBehaviour
     [SerializeField] private GameObject[] food;
     private float t, height;
     private GameObject foodObject;
-    public float spawnTime;
+    public float spawnTime, maxHeight;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class spawner : MonoBehaviour
         t = t + Time.deltaTime;
         if (t >= spawnTime)
         {
-            height = Random.Range(-1.5f, 1.5f);
+            height = Random.Range(-maxHeight, maxHeight);
             SpawnFood();
             t = 0f;
         }
