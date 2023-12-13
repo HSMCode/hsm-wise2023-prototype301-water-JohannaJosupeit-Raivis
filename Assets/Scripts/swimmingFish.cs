@@ -23,13 +23,16 @@ public class swimmingFish : MonoBehaviour
         {
             this.gameObject.SetActive(false);
         }
-        transform.position = transform.position - transform.forward * speed * Time.deltaTime;
+       
+            transform.position = transform.position - transform.forward * speed* 2 * Time.deltaTime;
+       
+       
     }
 
     private void OnTriggerEnter(Collider other)
     {
         
-        if(isAlive && other.gameObject.CompareTag("Player"))
+        if(isAlive && other.gameObject.CompareTag("Player") && playerMovement.isAlive)
         {
             playerMovement.exactScore += points;
             isAlive = false;

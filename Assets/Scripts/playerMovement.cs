@@ -28,14 +28,7 @@ public class playerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         scoreText = GameObject.Find("Score").GetComponent<Text>();
     }
-    void FixedUpdate()
-    {
-        if(isAlive)
-        {
-            exactScore += Time.deltaTime;
-        }
-      
-    }
+   
     // Update is called once per frame
     void Update()
     {
@@ -55,7 +48,7 @@ public class playerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && !isAlive)
         {
             Debug.Log("Restart");
-            SceneManager.LoadScene("EndlessLevel");
+            //SceneManager.LoadScene("Level_0");
         }
         else if (Input.GetButtonDown("Jump") && !isStarted)
         {

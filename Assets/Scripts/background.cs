@@ -4,24 +4,28 @@ using UnityEngine;
 
 public class background : MonoBehaviour
 {
-    public static float moveSpeed;
+    public float moveSpeed;
     private float offset;
-    private Material mat;
+    private Vector3 startPos;
 
-   
-    public float amplitude = 1f;
 
     private void Start()
     {
-        moveSpeed = 2f;
-        mat = GetComponent<Renderer>().material;
+        startPos = transform.position;
     }
 
     void Update()
     {
-        offset += (Time.deltaTime * moveSpeed) / 10;
-        mat.SetTextureOffset("_MainTex", new Vector2(offset, 0));
-
+        offset = startPos.z - (transform.position.z);
+        if (offset > 50f)
+        {
+            transform.position = startPos;
+        }
+        else if (playerMovement.isAlive)
+        {
+            transform.position = transform.position - transform.forward * moveSpeed *2 * Time.deltaTime;
+        }
+        
     }
 
 }

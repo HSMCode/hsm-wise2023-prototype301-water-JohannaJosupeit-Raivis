@@ -7,12 +7,14 @@ public class obstacleScript : MonoBehaviour
     private float speed;
     private bool isAlive;
     private float t;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         speed = 2f;
         isAlive = true;
         t = 0;
+        animator = GameObject.Find("Orca").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,7 +25,11 @@ public class obstacleScript : MonoBehaviour
         {
             this.gameObject.SetActive(false);
         }
-        transform.position = transform.position - transform.forward * speed * Time.deltaTime;
+        if (playerMovement.isAlive)
+        {
+            transform.position = transform.position - transform.forward * speed * 2* Time.deltaTime;
+        }
+     
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,8 +37,9 @@ public class obstacleScript : MonoBehaviour
         
         if(isAlive && other.gameObject.CompareTag("Player"))
         {
-            isAlive = false;
-            Debug.Log("YOURE DEAD BITCH");  
+            playerMovement.isAlive = false;
+            animator.SetBool("isAlive", false);
+            Debug.Log("YOURE DEAD BITCH");
         }
         
         
