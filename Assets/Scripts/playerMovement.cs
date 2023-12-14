@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+// this script moves the orca and starts the game
 public class playerMovement : MonoBehaviour
 {
     private int score;
-    private Animator animator;
-    private Rigidbody rb;
-    [SerializeField] private float speed = 5f;
     public static float exactScore;
+
+    [SerializeField] private float speed = 5f;
+   
     private bool moveUp = true;
     private Text scoreText;
     public static bool isAlive, isStarted;
@@ -30,35 +31,48 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // round the score to a whole number
         score = Mathf.RoundToInt(exactScore);
+        // and update the score text 
         scoreText.text = "Score:" + exactScore;
 
-     // START
+
+     // (RE)STARTING THE GAME
+
+        // if r is pressed and the player is dead
         if (Input.GetKeyDown(KeyCode.R) && !isAlive)
         {
+            // reload to scene to restart the game
             SceneManager.LoadScene("Level_0");
         }
+        // if space is pressed and the game hasnt been started yet
         else if (Input.GetButtonDown("Jump") && !isStarted)
         {
+            // start the game
            isStarted = true;
         }
-        // MOVEMENT
+     // MOVEMENT
+        
+        // if space  is pressed and the game has been started already
         else if (Input.GetButtonDown("Jump"))
         {
-            // Change direction when space is pressed
+            // Change the direction
             moveUp = !moveUp;
         }
 
+        // if the game has been started and the player is alive 
         if (isStarted && isAlive)
         {
+            // see line 72
             MoveObject();
         }
       
     }
 
+    // moves the player when called
     void MoveObject()
     {
-        // Switch between 2 floats depending on a bool
+        // Switch between 2 floats depending on the bool "moveUp"
         float moveDirection = moveUp ? 1f : -1f;
         // Calculate movement in local space
         float translation = moveDirection * speed * Time.deltaTime;
