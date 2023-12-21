@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1089592635511965618}
   - component: {fileID: 7575612297704328894}
   - component: {fileID: -2732006273798026429}
+  - component: {fileID: 4079126889886485408}
   m_Layer: 0
   m_Name: Jellyfish
   m_TagString: Untagged
@@ -54,8 +55,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.35196725, y: 0.9289832, z: 0.67906535}
-  m_Center: {x: 0.01851236, y: 0.35756567, z: -0.004153407}
+  m_Size: {x: 0.35196725, y: 0.8362248, z: 0.67906535}
+  m_Center: {x: 0.01851236, y: 0.40394488, z: -0.004153407}
 --- !u!54 &7575612297704328894
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -95,7 +96,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8562816e1cb693b409599ce5eff50c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3
+--- !u!95 &4079126889886485408
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402171877084750664}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e01d296a75a2a3540a03ea27fc9d016c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &6515145959770879841
 PrefabInstance:
   m_ObjectHideFlags: 0
