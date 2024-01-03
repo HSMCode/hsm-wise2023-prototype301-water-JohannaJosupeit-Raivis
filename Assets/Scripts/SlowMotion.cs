@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SlowMotion : MonoBehaviour
 {
-    public GameObject coinparticle;
+    public AudioClip destructionSound;
     bool isSlowing = false;
     float originalTimeScale;
     float slowDuration = 2.5f;
@@ -37,6 +37,7 @@ public class SlowMotion : MonoBehaviour
     {
         if(isAlive && other.gameObject.CompareTag("Player") && playerMovement.isStarted && !isSlowing)
         {
+            AudioSource.PlayClipAtPoint(destructionSound, transform.position);
             StartCoroutine(SlowDownTime());
 
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();

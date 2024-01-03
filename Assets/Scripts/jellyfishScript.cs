@@ -6,6 +6,7 @@ using UnityEngine;
 public class jellyfishScript
     : MonoBehaviour
 {
+    public AudioClip slappingSound;
     public float speed;
     private bool isAlive;
     private float t; // t for time
@@ -48,9 +49,9 @@ public class jellyfishScript
         // check if that object is the player and if the game started already
         if(isAlive && other.gameObject.CompareTag("Player") && playerMovement.isStarted)
         {
+            AudioSource.PlayClipAtPoint(slappingSound, transform.position);
             // the playerMoevent Script has to know the player is no longer alive
             playerMovement.isAlive = false;
-            // play the death animation
             animator.SetBool("isAlive", false);
         }
     }

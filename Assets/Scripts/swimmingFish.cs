@@ -5,6 +5,7 @@ using UnityEngine;
 // this script moves fish and lets the player eat them
 public class swimmingFish : MonoBehaviour
 {
+    public AudioClip destructionSound;
     public float speed;
     public int points;
     private bool isAlive;
@@ -53,6 +54,7 @@ public class swimmingFish : MonoBehaviour
             playerMovement.exactScore += points;
             // this fish is no longer alive :(
             isAlive = false;
+            AudioSource.PlayClipAtPoint(destructionSound, transform.position);
             // deactivate this fish :(
             this.gameObject.SetActive(false);
         }

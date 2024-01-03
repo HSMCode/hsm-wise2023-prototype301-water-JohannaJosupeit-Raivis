@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8562816e1cb693b409599ce5eff50c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slappingSound: {fileID: 8300000, guid: 01fa7172fdacf1c43bde09e306abe7c3, type: 3}
   speed: 3
 --- !u!95 &4079126889886485408
 Animator:
