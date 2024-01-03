@@ -84,6 +84,18 @@ PrefabInstance:
       propertyPath: m_ReflectionProbeUsage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a3fe8ff6ad82ec34380da9a0fdeb0d25, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ed18ef8cdbb6673479e2657389773f90, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3fe8ff6ad82ec34380da9a0fdeb0d25, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: ed18ef8cdbb6673479e2657389773f90, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a3fe8ff6ad82ec34380da9a0fdeb0d25, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: ed18ef8cdbb6673479e2657389773f90, type: 2}
     - target: {fileID: 919132149155446097, guid: a3fe8ff6ad82ec34380da9a0fdeb0d25, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -120,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c1bc5884d6d1da48b50d7ff4efbde89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinparticle: {fileID: 7193303298053368490, guid: b26716067183222459d04debfa961dcd, type: 3}
   speed: 2
 --- !u!65 &7015671413751533455
 BoxCollider:

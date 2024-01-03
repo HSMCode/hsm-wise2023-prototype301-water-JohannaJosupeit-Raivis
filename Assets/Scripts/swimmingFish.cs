@@ -32,10 +32,11 @@ public class swimmingFish : MonoBehaviour
             //in a desperate attempt to save the games performence deactivate this object.
             this.gameObject.SetActive(false);
         }
-
-        //move the fish forward (on the z- axis). The distance depends on how much time passed since the last frame and its speed
-        transform.position = transform.position - transform.forward * speed * 2 * Time.deltaTime;
-
+        if (playerMovement.isAlive == true)
+        {
+            //move the fish forward (on the z- axis). The distance depends on how much time passed since the last frame and its speed
+            transform.position = transform.position - transform.forward * speed * 2 * Time.deltaTime;
+        }
     }
 
     // if an object collides with this one

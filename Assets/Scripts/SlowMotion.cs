@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SlowMotion : MonoBehaviour
 {
+    public GameObject coinparticle;
     bool isSlowing = false;
     float originalTimeScale;
     float slowDuration = 2.5f;
