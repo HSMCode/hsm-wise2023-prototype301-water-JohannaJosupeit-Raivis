@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8562816e1cb693b409599ce5eff50c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slappingSound: {fileID: 8300000, guid: 01fa7172fdacf1c43bde09e306abe7c3, type: 3}
   speed: 3
 --- !u!95 &4079126889886485408
 Animator:
@@ -126,6 +127,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8976472872001919292}
     m_Modifications:
+    - target: {fileID: 8944570774374101422, guid: 9051ae33ecca64e4e8ea37a9ac9de68c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c56d436d800bbf3498e9ff230933f265, type: 2}
+    - target: {fileID: 8944570774496912846, guid: 9051ae33ecca64e4e8ea37a9ac9de68c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c56d436d800bbf3498e9ff230933f265, type: 2}
+    - target: {fileID: 8944570774678947490, guid: 9051ae33ecca64e4e8ea37a9ac9de68c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c56d436d800bbf3498e9ff230933f265, type: 2}
+    - target: {fileID: 8944570775246247156, guid: 9051ae33ecca64e4e8ea37a9ac9de68c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c56d436d800bbf3498e9ff230933f265, type: 2}
     - target: {fileID: 8944570775922665154, guid: 9051ae33ecca64e4e8ea37a9ac9de68c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3447

@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c51467aeb61754598e4ab1506d5acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructionSound: {fileID: 8300000, guid: 44966b07d2800054d9d7a1ce833ac284, type: 3}
   speed: 2
   points: 2
 --- !u!54 &7575612297704328894

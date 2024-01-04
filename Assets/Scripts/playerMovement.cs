@@ -40,7 +40,7 @@ public class playerMovement : MonoBehaviour
      // (RE)STARTING THE GAME
 
         // if r is pressed and the player is dead
-        if (Input.GetKeyDown(KeyCode.R) && !isAlive)
+        if (Input.GetKeyDown(KeyCode.Space) && !isAlive)
         {
             // reload to scene to restart the game
             SceneManager.LoadScene("Level_0");

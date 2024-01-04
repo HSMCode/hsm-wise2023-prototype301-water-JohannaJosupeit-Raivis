@@ -5,6 +5,7 @@ using UnityEngine;
 // this script moves fish and lets the player eat them
 public class swimmingFish : MonoBehaviour
 {
+    public AudioClip destructionSound;
     public float speed;
     public int points;
     private bool isAlive;
@@ -32,10 +33,11 @@ public class swimmingFish : MonoBehaviour
             //in a desperate attempt to save the games performence deactivate this object.
             this.gameObject.SetActive(false);
         }
-
-        //move the fish forward (on the z- axis). The distance depends on how much time passed since the last frame and its speed
-        transform.position = transform.position - transform.forward * speed * 2 * Time.deltaTime;
-
+        if (playerMovement.isAlive == true)
+        {
+            //move the fish forward (on the z- axis). The distance depends on how much time passed since the last frame and its speed
+            transform.position = transform.position - transform.forward * speed * 2 * Time.deltaTime;
+        }
     }
 
     // if an object collides with this one
@@ -52,6 +54,7 @@ public class swimmingFish : MonoBehaviour
             playerMovement.exactScore += points;
             // this fish is no longer alive :(
             isAlive = false;
+            AudioSource.PlayClipAtPoint(destructionSound, transform.position);
             // deactivate this fish :(
             this.gameObject.SetActive(false);
         }
