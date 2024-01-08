@@ -38,16 +38,16 @@ public class jellyfishScript
         if (playerMovement.isAlive)
         {
             //move the object forward (on the z- axis). The distance depends on how much time passed since the last frame and its speed
-            transform.position = transform.position - transform.forward * speed * 2* Time.deltaTime;
+            transform.position = transform.position - transform.forward * speed * 2 * Time.deltaTime;
         }
-     
+
     }
 
     // if an object collides with this one
     private void OnTriggerEnter(Collider other)
     {
         // check if that object is the player and if the game started already
-        if(isAlive && other.gameObject.CompareTag("Player") && playerMovement.isStarted)
+        if (isAlive && other.gameObject.CompareTag("Player") && playerMovement.isStarted)
         {
             AudioSource.PlayClipAtPoint(slappingSound, transform.position);
             // the playerMoevent Script has to know the player is no longer alive
