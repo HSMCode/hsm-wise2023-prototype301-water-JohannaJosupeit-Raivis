@@ -98,6 +98,14 @@ details
 
 ## Acknowledgments
 
+Credits:
+JohannaJosupeit <josupeitjohanna@gmail.com>
+
+Malteleh <148697349+Malteleh@users.noreply.github.com>
+
+ldacruz <linda.kruse@hs-mainz.de>
+
+DESKTOP-OJKKQID\phill <philipp.siemoneit@students.hs-mainz.de>
   - Hat tip to anyone whose code was used
   - Inspiration
   - etc
